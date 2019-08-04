@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Eric Cartman",
+        "alias": "A.W.E.S.O.M.-O 4000",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/6/6d/Awesomo-0.png/revision/latest?cb=20170601014435"
+    },
+    {
+        "id": 2,
+        "name": "Kenneth 'Kenny' McCormick",
+        "alias": "Mysterion",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/1/1c/Mysterion_2.png/revision/latest/scale-to-width-down/620?cb=20171107042555"
+    },
+    {
+        "id": 3,
+        "name": "Leopold 'Butters' Scotch",
+        "alias": "Professor Chaos",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/b/b8/Professor-chaos.png/revision/latest?cb=20180409101847"
+    },
+    {
+        "id": 4,
+        "name":"Kyle Broflovki",
+        "alias": "The Human Kite",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/c/c9/Humankite.transparent.png/revision/latest/scale-to-width-down/620?cb=20190411032436"
+    },
+    {
+        "id": 5,
+        "name": "Stanley 'Stan' Marsh",
+        "alias": "Toolshed",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/b/bd/Toolshed.transparent.png/revision/latest?cb=20170527025409"
+    },
+    {
+        "id": 6,
+        "name": "Craig Tucker",
+        "alias": "Feldspar the Thief",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/7/77/Feldspar-the-theif.png/revision/latest?cb=20170530123940"
+    },
+    {
+        "id": 7,
+        "name": "Tweek Tweak",
+        "alias": "Wonder Tweek",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/9/9d/Tweek_pic.png/revision/latest/scale-to-width-down/620?cb=20160402115548"
+    },
+    {
+        "id": 8,
+        "name": "Dr. William Janus",
+        "alias": "Tuong Lu Kim",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/c/cd/City-wok-guy.png/revision/latest/scale-to-width-down/476?cb=20151118032652"
+    },
+    {
+        "id": 9,
+        "name": "Randy Marsh",
+        "alias": "Steamy Ray Vaughn",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/e/e2/Farmer-randy.png/revision/latest?cb=20181021111756"
+    },
+    {
+        "id": 10,
+        "name": "Token Black",
+        "alias": "Tupperware",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/e/e8/Latest-15.png/revision/latest?cb=20170530124632"
+    },
+    {
+        "id": 11,
+        "name": "Bradley Biggle",
+        "alias": "Mintberry Crunch",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/f/ff/Bradley_biggle_pic.png/revision/latest/scale-to-width-down/620?cb=20170322005214"
+    },
+    {
+        "id": 12,
+        "name": "Jack Brolin",
+        "alias": "Captain Hindsght",
+        "image": "https://vignette.wikia.nocookie.net/southpark/images/c/c5/Captain-hindsight.png/revision/latest?cb=20170428085713"
+    }
+]
