@@ -1,0 +1,27 @@
+.card {
+    width: 175px;
+    height: 200px;
+    float: left;
+}
+
+.card-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.img-wrapper {
+    margin: auto;
+    width: 75px;
+}
+
+.card-body {
+    margin-bottom: -25px;
+}
+
+.card-title {
+    font-size: 11.5px;
+}
+
+.card-text {
+    font-size: 9.5px;
+}
