@@ -17,11 +17,25 @@ class App extends Component {
     count: 0
   };
 
+
   southParkMemory = id => {
     const character = this.state.friends.filter(friend => friend.id !== id);
-    console.log(character);
-    this.setState({ character, count: this.state.count + 1 });
-  }
+
+    console.log(this.state.clicked);
+
+    this.setState(prevState => ({ 
+      clicked: [...prevState.clicked, id], 
+      character, 
+      count: this.state.count + 1 }));
+  };
+
+  duplicateId = id => {
+
+    if (id === this.state.clicked.length) {
+      console.log("Duplicate");
+    };
+
+  };
 
   shuffleCards = arr => {
     if (this.state.count <= 12) {
@@ -30,16 +44,22 @@ class App extends Component {
         const temp = arr[i]
         arr[i] = arr[j]
         arr[j] = temp
-      }
+      };
     } else {
+      
       this.setState({
         count: 0
       })
-    }
+    };
     return arr
   };
 
+  componentDidMount() {
+    this.shuffleCards(friends);
+  }
+
   componentDidUpdate() {
+    this.duplicateId(friends.id)
     this.shuffleCards(friends);
   }
 
@@ -53,7 +73,6 @@ class App extends Component {
         <div className="container col-8">
           {this.state.friends.map(friend =>
             <FriendCard
-              // shuffle={this.shuffleCards}
               southParkMemory={this.southParkMemory}
               key={friend.id}
               id={friend.id}
