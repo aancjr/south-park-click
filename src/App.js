@@ -24,24 +24,28 @@ class App extends Component {
   }
 
   shuffleCards = arr => {
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * arr.length)
-      const temp = arr[i]
-      arr[i] = arr[j]
-      arr[j] = temp
+    if (this.state.count <= 12) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * arr.length)
+        const temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+      }
+    } else {
+      this.setState({
+        count: 0
+      })
     }
     return arr
   };
 
-  componentDidMount() {
-
-        this.shuffleCards(friends);
-
-}
+  componentDidUpdate() {
+    this.shuffleCards(friends);
+  }
 
 
   render() {
-    
+
     return (
       <Wrapper>
         <Navbar count={this.state.count} />
