@@ -1,9 +1,23 @@
 import React from "react";
 import "./style.css";
 
+
+
 function FriendCard(props) {
+    // function shuffleCards(arr) {
+    //     for (let i = arr.length - 1; i > 0; i--) {
+    //       const j = Math.floor(Math.random() * arr.length)
+    //       const temp = arr[i]
+    //       arr[i] = arr[j]
+    //       arr[j] = temp
+    //     }
+    //     return arr
+    //   };
+    // const shuffle = shuffleCards(props);
+
     return (
         // <div className="container">
+        <span onClick={() => props.southParkMemory(props.id)} className="memory">
             <button type="button" className="btn">
                 <div className="card">
                     <div className="card-wrapper">
@@ -17,6 +31,7 @@ function FriendCard(props) {
                     </div>
                 </div>
             </button>
+        </span>
         // </div>
     );
 };
