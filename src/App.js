@@ -19,20 +19,27 @@ class App extends Component {
 
 
   southParkMemory = id => {
-    const character = this.state.friends.filter(friend => friend.id !== id);
+    // const friends = this.state.friends.filter(friend => friend.id !== id);
 
-    console.log(this.state.clicked);
-
+    this.duplicateId(id);
     this.setState(prevState => ({ 
-      clicked: [...prevState.clicked, id], 
-      character, 
+      clicked: [id, ...prevState.clicked], 
+      // friends, 
       count: this.state.count + 1 }));
-  };
+      console.log(this.state.clicked);
+    };
 
   duplicateId = id => {
 
     if (id === this.state.clicked.length) {
-      console.log("Duplicate");
+      this.setState({
+        count: 0,
+        clicked: [],
+        friends
+      })
+      alert(`You already picked that friend! TRY AGAIN!`);
+      window.location.reload();
+
     };
 
   };
@@ -59,7 +66,7 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    this.duplicateId(friends.id)
+    // this.duplicateId(friends.id)
     this.shuffleCards(friends);
   }
 
@@ -83,7 +90,6 @@ class App extends Component {
           )}
         </div>
       </Wrapper>
-
     )
   };
 }
