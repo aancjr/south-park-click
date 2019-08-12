@@ -14,37 +14,48 @@ class App extends Component {
   state = {
     clicked: [],
     friends,
+    highScore: 0,
     count: 0
   };
 
 
   southParkMemory = id => {
-    // const friends = this.state.friends.filter(friend => friend.id !== id);
 
-    this.duplicateId(id);
-    this.setState(prevState => ({ 
-      clicked: [id, ...prevState.clicked], 
-      // friends, 
-      count: this.state.count + 1 }));
-      console.log(this.state.clicked);
-    };
+    if (this.state.clicked.includes(id)) {
 
-  duplicateId = id => {
+      alert("Try again!");
 
-    if (id === this.state.clicked.length) {
+      this.highscore();
+
       this.setState({
-        count: 0,
         clicked: [],
-        friends
-      })
-      alert(`You already picked that friend! TRY AGAIN!`);
-      window.location.reload();
+        friends,
+        // highScore: this.highscore(),
+        count: 0
+      });
 
-    };
+      console.log(`High Score: ${this.state.highScore}`)
 
+    } else {
+
+      this.setState(prevState => ({
+        clicked: [id, ...prevState.clicked],
+        count: this.state.count + 1
+      }));
+
+      console.log(this.state.clicked);
+
+    }
   };
 
+  highscore = () => {
+    if (this.state.count > this.state.highScore) {
+      this.setState({highScore: this.state.count})
+    }
+  }
+
   shuffleCards = arr => {
+
     if (this.state.count <= 12) {
       for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * arr.length)
@@ -52,12 +63,9 @@ class App extends Component {
         arr[i] = arr[j]
         arr[j] = temp
       };
-    } else {
-      
-      this.setState({
-        count: 0
-      })
+
     };
+
     return arr
   };
 
@@ -66,7 +74,6 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    // this.duplicateId(friends.id)
     this.shuffleCards(friends);
   }
 
@@ -75,7 +82,7 @@ class App extends Component {
 
     return (
       <Wrapper>
-        <Navbar count={this.state.count} />
+        <Navbar count={this.state.count} highscore={this.state.highScore}/>
         <Title>South Park Click!</Title>
         <div className="container col-8">
           {this.state.friends.map(friend =>
