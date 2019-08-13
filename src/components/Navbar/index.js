@@ -7,7 +7,7 @@ function Navbar(props) {
             <a className="navbar-brand" /*href="#"*/>South Park Click!</a>
             <div className="collapse navbar-collapse" id="navbarText">
                 <span className="ml-auto">
-                    Score: <span className="currentScore" id="currentScore">{props.count}</span> | High Score: <span className="highScore" id="highScore"> {props.highScore} </span>
+                    Score: <span className="currentScore" id="currentScore">{props.count}</span> | High Score: <span className="highScore" id="highScore"> {props.highscore}</span>
                 </span>
             </div>
         </nav>

@@ -25,8 +25,6 @@ class App extends Component {
 
       alert("Try again!");
 
-      this.highscore();
-
       this.setState({
         clicked: [],
         friends,
@@ -75,6 +73,8 @@ class App extends Component {
 
   componentDidUpdate() {
     this.shuffleCards(friends);
+    this.highscore();
+
   }
 
 
