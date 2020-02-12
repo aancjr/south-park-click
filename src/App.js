@@ -4,6 +4,7 @@ import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Title from "./components/Title";
 import friends from "./friends.json";
+import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -86,8 +87,10 @@ class App extends Component {
       <Wrapper>
         <Navbar count={this.state.count} highscore={this.state.highScore} className=""/>
         {/* <Title>South Park Click!</Title> */}
-        <div className="container col-8">
+        <div className="container col-12">
           {this.state.friends.map(friend =>
+          <Container className="mx-auto">
+
             <FriendCard
               southParkMemory={this.southParkMemory}
               key={friend.id}
@@ -95,7 +98,9 @@ class App extends Component {
               name={friend.name}
               image={friend.image}
               alias={friend.alias}
-            />
+              />
+
+              </Container>
           )}
         </div>
       </Wrapper>

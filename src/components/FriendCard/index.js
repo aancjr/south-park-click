@@ -9,7 +9,7 @@ import "./style.css";
 function FriendCard(props) {
     return (
         <Card className="cardsize">
-            <Button className="shadow-none button" variant="outline-light" onClick={() => props.southParkMemory(props.id)}>
+            <Button className="btn" variant="outline-light" onClick={() => props.southParkMemory(props.id)}>
                 {/* <div className="card-wrapper"> */}
                 <Image className="imgsize " varient="top" src={props.image} alt={props.name} />
                 <Card.Body className="cardbody">
