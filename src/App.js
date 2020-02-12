@@ -4,6 +4,8 @@ import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Title from "./components/Title";
 import friends from "./friends.json";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import './App.css';
 
@@ -82,8 +84,8 @@ class App extends Component {
 
     return (
       <Wrapper>
-        <Navbar count={this.state.count} highscore={this.state.highScore}/>
-        <Title>South Park Click!</Title>
+        <Navbar count={this.state.count} highscore={this.state.highScore} className=""/>
+        {/* <Title>South Park Click!</Title> */}
         <div className="container col-8">
           {this.state.friends.map(friend =>
             <FriendCard

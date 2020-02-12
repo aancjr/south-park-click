@@ -1,23 +1,24 @@
 import React from "react";
+import Button from "react-bootstrap/button";
+import Card from "react-bootstrap/Card";
+import Image from "react-bootstrap/Image";
 import "./style.css";
 
 
 
 function FriendCard(props) {
     return (
-        <button type="button" className="btn shadow-none" onClick={() => props.southParkMemory(props.id)}>
-            <div className="card">
-                <div className="card-wrapper">
-                    <div className="img-wrapper">
-                        <img src={props.image} className="card-img-top" alt={props.name} />
-                    </div>
-                    <div className="card-body">
-                        <h5 className="card-title text-center">{props.name}</h5>
-                        <p className="card-text text-center"><strong>Alias:</strong> {props.alias}</p>
-                    </div>
-                </div>
-            </div>
-        </button>
+        <Card className="cardsize">
+            <Button className="shadow-none button" variant="outline-light" onClick={() => props.southParkMemory(props.id)}>
+                {/* <div className="card-wrapper"> */}
+                <Image className="imgsize " varient="top" src={props.image} alt={props.name} />
+                <Card.Body className="cardbody">
+                    <Card.Text className="title text-center">{props.name}</Card.Text>
+                    <Card.Text className="cardtext text-center"><strong>Alias:</strong> {props.alias}</Card.Text>
+                </Card.Body>
+                {/* </div> */}
+            </Button>
+        </Card>
     );
 };
 
