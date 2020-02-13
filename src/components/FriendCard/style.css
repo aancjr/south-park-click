@@ -1,14 +1,14 @@
 
 .btn {
-    width: 175px;
-    height: 200px;
+    width: 160px;
+    height: 170px;
 }
 
 .cardsize {
-    width: 175px;
-    height: 190px;
+    width: 165px;
+    height: 170px;
     float: left;
-    margin: 5px;
+    margin: 3px;
 }
 
 .card-body.cardbody {
@@ -22,7 +22,7 @@
  */
 .imgsize {
     margin: auto;
-    width: 75px;
+    width: 70px;
 }
 
 /* .card-body {
@@ -31,12 +31,12 @@
 
 .title {
     color: black;
-    font-weight: bolder;
+    font-weight: 550;
     font-size: x-small;
     margin-bottom: 4px;
 }
 
 .cardtext {
     color: black;
-    font-size: 9.5px;
+    font-size: 8.5px;
 }

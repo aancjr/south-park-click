@@ -100,7 +100,7 @@ class App extends Component {
               alias={friend.alias}
               />
 
-              </Container>
+            </Container>
           )}
         </div>
       </Wrapper>
