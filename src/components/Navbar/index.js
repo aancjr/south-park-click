@@ -5,9 +5,9 @@ import "./style.css";
 function Navbar(props) {
     return (
         <NavBar className="nav" bg="light">
-            <NavBar.Brand>South Park Click!</NavBar.Brand>
+            <NavBar.Brand><strong>South Park Rodeo!</strong></NavBar.Brand>
             <span className="ml-auto">
-                Score: <span className="currentScore" id="currentScore">{props.count}</span> | High Score: <span className="highScore" id="highScore"> {props.highscore}</span>
+                <strong>Score: <span className="currentScore" id="currentScore">{props.count}</span> | High Score: <span className="highScore" id="highScore"> {props.highscore}</span></strong>
             </span>
         </NavBar>
     )

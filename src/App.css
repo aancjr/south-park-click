@@ -1,0 +1,11 @@
+.tile-row {
+    background-color: transparent;
+}
+
+.card {
+    width: 165px;
+    height: 170px;
+    float: left;
+    margin: 0px auto 10px auto;
+}
+

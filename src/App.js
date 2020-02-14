@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import FriendCard from "./components/FriendCard"
-import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
-import Title from "./components/Title";
 import friends from "./friends.json";
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import './App.css';
-
 
 
 class App extends Component {
@@ -51,7 +48,7 @@ class App extends Component {
 
   highscore = () => {
     if (this.state.count > this.state.highScore) {
-      this.setState({highScore: this.state.count})
+      this.setState({ highScore: this.state.count })
     }
   }
 
@@ -84,26 +81,27 @@ class App extends Component {
   render() {
 
     return (
-      <Wrapper>
-        <Navbar count={this.state.count} highscore={this.state.highScore} className=""/>
-        {/* <Title>South Park Click!</Title> */}
-        <div className="container col-12">
-          {this.state.friends.map(friend =>
-          <Container className="mx-auto">
+      <>
+        <Navbar className="" count={this.state.count} highscore={this.state.highScore} />
 
-            <FriendCard
-              southParkMemory={this.southParkMemory}
-              key={friend.id}
-              id={friend.id}
-              name={friend.name}
-              image={friend.image}
-              alias={friend.alias}
-              />
+        <Container className="">
+          <Row className="mt-3 mx-1 tile-row justify-content-center">
+            {this.state.friends.map(friend =>
+              <Card className="">
+                <FriendCard
+                  southParkMemory={this.southParkMemory}
+                  key={friend.id}
+                  id={friend.id}
+                  name={friend.name}
+                  image={friend.image}
+                  alias={friend.alias}
+                />
+              </Card>
+            )}
+          </Row>
+        </Container>
 
-            </Container>
-          )}
-        </div>
-      </Wrapper>
+      </>
     )
   };
 }

@@ -1,33 +1,16 @@
-
 .btn {
     width: 160px;
     height: 170px;
-}
-
-.cardsize {
-    width: 165px;
-    height: 170px;
-    float: left;
-    margin: 3px;
 }
 
 .card-body.cardbody {
     padding: 10px 0px 0px 0px; 
 }
 
-/* .card-wrapper {
-    margin-top: auto;
-    margin-bottom: auto;
-}
- */
 .imgsize {
     margin: auto;
     width: 70px;
 }
-
-/* .card-body {
-    margin-bottom: -25px;
-} */
 
 .title {
     color: black;
