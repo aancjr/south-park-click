@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Navbar from "./components/Navbar";
+import GameplayModal from "./components/GameplayModal/GameplayModal";
 import friends from "./friends.json";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -12,7 +13,9 @@ class App extends Component {
     clicked: [],
     friends,
     highScore: 0,
-    score: 0
+    score: 0,
+    show: false,
+    setShow: false
   };
 
   southParkMemory = id => {
@@ -38,11 +41,12 @@ class App extends Component {
 
   highscore = () => {
     if (this.state.score >= 12) {
-      this.setState({ 
+      this.setState({
         highScore: 12,
         clicked: [],
-        score: 0});
-      alert("YOU WON! Let's go to City Wok!")
+        score: 0
+      });
+      alert("YOU WON! Let's go to City Wok!");
     } else if (this.state.score > this.state.highScore) {
       this.setState({ highScore: this.state.score });
     }
@@ -61,8 +65,25 @@ class App extends Component {
     return arr;
   };
 
+  handleShow = () => {
+    if (this.state.highScore === 0) {
+      this.setState({
+        show: true,
+        setShow: true
+      });
+    }
+  };
+
+  handleClose = () => {
+    this.setState({
+      show: false,
+      setShow: false
+    });
+  };
+
   componentDidMount() {
     this.shuffleCards(friends);
+    this.handleShow();
   }
 
   componentDidUpdate() {
@@ -73,10 +94,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <Navbar
-          score={this.state.score}
-          highscore={this.state.highScore}
-        />
+        <Navbar score={this.state.score} highscore={this.state.highScore} />
+        <GameplayModal show={this.state.show} close={this.handleClose} />
 
         <Container>
           <Row className="tile-row justify-content-center">
