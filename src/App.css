@@ -1,11 +1,12 @@
 .tile-row {
-    background-color: transparent;
+    margin-top: 3rem;
 }
 
-.card {
-    width: 165px;
-    height: 170px;
-    float: left;
-    margin: 0px auto 10px auto;
-}
+@media screen and (min-width: 1600px) {
+
+    .tile-row {
+        margin-top: 50px;
+    }
+
+}    
 
