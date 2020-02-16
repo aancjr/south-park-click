@@ -8,7 +8,8 @@ function FriendCard(props) {
   return (
     <Card>
       <Button
-        className="btn"
+        className="charbtn"
+        id="buttonshadow"
         variant="outline-*"
         onClick={() => props.southParkMemory(props.id)}
       >
