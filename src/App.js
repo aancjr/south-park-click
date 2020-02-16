@@ -12,7 +12,7 @@ class App extends Component {
     clicked: [],
     friends,
     highScore: 0,
-    count: 0
+    score: 0
   };
 
   southParkMemory = id => {
@@ -22,14 +22,14 @@ class App extends Component {
       this.setState({
         clicked: [],
         friends,
-        count: 0
+        score: 0
       });
 
       console.log(`High Score: ${this.state.highScore}`);
     } else {
       this.setState(prevState => ({
         clicked: [id, ...prevState.clicked],
-        count: this.state.count + 1
+        score: this.state.score + 1
       }));
 
       console.log(this.state.clicked);
@@ -37,13 +37,19 @@ class App extends Component {
   };
 
   highscore = () => {
-    if (this.state.count > this.state.highScore) {
-      this.setState({ highScore: this.state.count });
+    if (this.state.score >= 12) {
+      this.setState({ 
+        highScore: 12,
+        clicked: [],
+        score: 0});
+      alert("YOU WON! Let's go to City Wok!")
+    } else if (this.state.score > this.state.highScore) {
+      this.setState({ highScore: this.state.score });
     }
   };
 
   shuffleCards = arr => {
-    if (this.state.count <= 12) {
+    if (this.state.score <= 12) {
       for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * arr.length);
         const temp = arr[i];
@@ -68,7 +74,7 @@ class App extends Component {
     return (
       <>
         <Navbar
-          count={this.state.count}
+          score={this.state.score}
           highscore={this.state.highScore}
         />
 

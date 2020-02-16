@@ -7,7 +7,7 @@ function Navbar(props) {
         <NavBar className="nav" bg="light">
             <NavBar.Brand><strong>South Park Rodeo!</strong></NavBar.Brand>
             <span className="ml-auto">
-                <strong>Score: <span className="currentScore" id="currentScore">{props.count}</span> | High Score: <span className="highScore" id="highScore"> {props.highscore}</span></strong>
+                <strong>Score: <span className="currentScore" id="currentScore">{props.score}</span> | High Score: <span className="highScore" id="highScore"> {props.highscore}</span></strong>
             </span>
         </NavBar>
     )
