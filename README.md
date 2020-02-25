@@ -9,4 +9,8 @@ Packages used: react-bootstrap, gh-pages (for deployment).
 ## Play the game!
 https://aancjr.github.io/south-park-click/
 
+## Instructions
+
+Begin playing the game by clicking on your first character. Try to click each character once to win! The game will reset if you click a character more than once. 
+
 ![](SouthParkRodeo.gif)
