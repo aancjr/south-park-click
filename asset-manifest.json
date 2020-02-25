@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/south-park-click/static/css/main.9a283a5f.chunk.css",
+    "main.js": "/south-park-click/static/js/main.c742cbe6.chunk.js",
+    "main.js.map": "/south-park-click/static/js/main.c742cbe6.chunk.js.map",
+    "runtime-main.js": "/south-park-click/static/js/runtime-main.f452d14d.js",
+    "runtime-main.js.map": "/south-park-click/static/js/runtime-main.f452d14d.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/south-park-click/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.5fb22d8f.chunk.js": "/south-park-click/static/js/2.5fb22d8f.chunk.js",
+    "static/js/2.5fb22d8f.chunk.js.map": "/south-park-click/static/js/2.5fb22d8f.chunk.js.map",
+    "index.html": "/south-park-click/index.html",
+    "precache-manifest.1b82a445639a2a9e6e0a8bcd4b07cf72.js": "/south-park-click/precache-manifest.1b82a445639a2a9e6e0a8bcd4b07cf72.js",
+    "service-worker.js": "/south-park-click/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/south-park-click/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.9a283a5f.chunk.css.map": "/south-park-click/static/css/main.9a283a5f.chunk.css.map",
+    "static/js/2.5fb22d8f.chunk.js.LICENSE.txt": "/south-park-click/static/js/2.5fb22d8f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/south-park-click/static/media/background.38cebca0.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f452d14d.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.5fb22d8f.chunk.js",
+    "static/css/main.9a283a5f.chunk.css",
+    "static/js/main.c742cbe6.chunk.js"
+  ]
+}
